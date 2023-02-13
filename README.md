@@ -16,3 +16,7 @@ Ce site web utilise HTML et Markdown.
 ## Licence
 
 Ce site web est publié sous la licence MIT.
+
+## Auteur
+Corentin : Dev1
+François  : Dev2
