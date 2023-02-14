@@ -20,3 +20,8 @@ Ce site web utilise HTML et Markdown.
 ## Licence
 
 Ce site web est publié sous la licence MIT.
+
+## Auteurs
+
+Dev1 : Mathieu
+Dev2 : Stella
