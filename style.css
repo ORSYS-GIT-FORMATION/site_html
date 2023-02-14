@@ -10,3 +10,27 @@ body {
     top: 0;
     left: 50vw;
 }
+
+#top-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 24px;
+}
+img {
+    height: 100px;
+    width: 100px;
+    margin-left: 16px;
+}
+
+#button-del {
+    height: 30px;
+    width: 60px;
+    background-color: #8fcb9b;
+    border: none;
+    border-radius: 10rem;
+}
+
+#button-del:hover {
+    cursor: wait;
+}
