@@ -16,23 +16,31 @@ public class Vehicule {
 
     // maVoitre.roule() // maVoitrue.immatriculation = 43
 
-    // maVoiture.seGare() // maVoitrue.immatriculation = 43
+    // maVoiture.seGare() // maVoitrue.immatriculation = 43 => maVoiture.setImmatriculation()
 
     // maVoiture.XX() // maVoitrue.immatriculation = 43
 
+    static int nbDeVehicule = 0;
+
     String immatriculation;
 
-    public Vehicule() {
+    public Vehicule () {
 
         // Constructeur 1
 
+        System.out.println("Appel du constructeur 1");
+
+        nbDeVehicule ++;
     }
 
-    public Vehicule (String immatriculation_locale) {
+
+    public Vehicule (String immatriculationLocale) {
 
         // immatriculation_locale existe a partir d'ici
 
-        this.immatriculation = immatriculation_locale;
+        System.out.println("Appel du constructeur 2");
+
+        this.immatriculation = immatriculationLocale;
 
 
     } // immatriculation_locale n'existe plus ici
@@ -40,6 +48,7 @@ public class Vehicule {
     public Vehicule (Integer immatriculation_locale) {
 
         // Constructeur 3
+        System.out.println("Appel du constructeur 3");
 
     }
 
@@ -47,6 +56,22 @@ public class Vehicule {
 
         // Constructeur
 
+        System.out.println("Appel du constructeur 4");
+
     }
+
+    // Une premiere méthode : un getters
+     public String getImmatriculation () {
+
+        return this.immatriculation;
+
+    }
+
+    public void setImmatriculation (String nouvelleImmatriculation) {
+
+        this.immatriculation = nouvelleImmatriculation;
+
+    }
+
 
 }

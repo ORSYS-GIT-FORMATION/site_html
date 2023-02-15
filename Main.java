@@ -12,6 +12,49 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+        CompteCourant compte1 = new CompteCourant();
+
+        CompteCourant compte2 = new CompteCourant(2000, "Mon compte perso");
+
+        CompteCourant compte3 = new CompteCourant(4000);
+
+        System.out.println(compte1.resume());
+
+        System.out.println(compte2.resume());
+
+        System.out.println(compte3.resume());
+
+        compte1.setMontant(1500);
+
+        System.out.println(compte1.resume());
+
+        System.out.println(CompteCourant.getNbCompteOuvert());
+
+
+        /*
+        Vehicule maVoiture = new Vehicule("FR7575"); // maVoiture est une référence
+
+        System.out.println(maVoiture.immatriculation);
+
+        System.out.println(maVoiture.getImmatriculation());
+
+        maVoiture.setImmatriculation("GH318");
+
+        System.out.println(maVoiture.immatriculation);
+
+        System.out.println(maVoiture.getImmatriculation());
+
+        maVoiture.immatriculation = "TT6677";
+
+        maVoiture.setImmatriculation("une autre immatriculation");
+
+        System.out.println(maVoiture.immatriculation);
+
+        System.out.println(maVoiture.getImmatriculation());
+    */
+
+        /*
         Scanner in = new Scanner(System.in);
 
         System.out.println("Entrer votre age :");
@@ -94,7 +137,7 @@ public class Main {
 
             default:
                 System.out.println("Tous les autres cas...");
-        }
+        }*/
 
 
     }
