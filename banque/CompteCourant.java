@@ -16,6 +16,7 @@ public class CompteCourant {
         addAnAccount();
 
         this.numero = getNbCompteOuvert();
+
     }
 
     public CompteCourant(float montant) {
@@ -39,18 +40,37 @@ public class CompteCourant {
         this.numero = getNbCompteOuvert();
     }
 
-    public static void transfert(CompteCourant compteA, CompteCourant compteB, int montant) {
+    public static void transfert(CompteCourant compteA, CompteCourant compteB, float montant) {
 
-        if (montant < 0) {
+        if (montant > 0) {
 
             if ((compteA.getMontant() + compteA.getDecouvertMaxAutorise()) >= montant) {
 
+                compteA.setMontant(compteA.getMontant() - montant);
 
+                compteB.setMontant(compteB.getMontant() + montant);
+
+            } else {
+
+                return;
 
             }
-        } else if (montant > 0) {
 
+        } else if (montant < 0) {
 
+            montant = montant * -1;
+
+            if ((compteB.getMontant() + compteB.getDecouvertMaxAutorise()) >= montant) {
+
+                compteB.setMontant(compteB.getMontant() - montant);
+
+                compteA.setMontant(compteA.getMontant() + montant);
+
+            } else {
+
+                return;
+
+            }
 
         } else {
 
@@ -62,7 +82,15 @@ public class CompteCourant {
 
     public void updateDecouvertMaxAutorise() {
 
-        this.decouvertMaxAutorise = this.getMontant() / 2;
+        if (getMontant() <= 0) {
+
+            this.decouvertMaxAutorise = 0;
+
+        } else {
+
+            this.decouvertMaxAutorise = this.getMontant() / 2;
+
+        }
 
     }
 

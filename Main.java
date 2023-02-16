@@ -23,13 +23,21 @@ public class Main {
 
         System.out.println(compte1.resume());
 
+        System.out.println(compte2.resume());
+
         //System.out.println(CompteCourant.getNbCompteOuvert());
 
         CompteCourant.transfert(compte1, compte2, 1000);
 
         System.out.println(compte1.resume());
 
+        System.out.println(compte2.resume());
+
+        CompteCourant.transfert(compte1, compte2, 600);
+
         System.out.println(compte1.resume());
+
+        System.out.println(compte2.resume());
 
     }
 }
