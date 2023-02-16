@@ -44,7 +44,18 @@ _jour 2 : à venir_
 - Créer un package banque dans lequel vous allez mettre toutes les classes réaliser jusqu'ici (vous pouvez organiser autrement si vous le souhaitez)
 - Maintenant que l'on utilise les classes en dehors de leur package il faut faire attention aux éléments public/potected/private. Corriger si necessaire.
 - Nous allons réaliser un semblant d'application de gestion.
-- Dans la classe main réaliser un Menu qui présente les différentes opérations : au démarage 
+- Dans la classe main réaliser deux Menu qui présentent les différentes opérations possible : 
+    - Premier menu :
+        - Création d'une banque
+        - Gérer une banque
+        - Voir mes banques
+        - Quitter
+    - Si l'on choisit de gérer une banque :
+        - Ajouter un compte
+        - Faire un transfert
+        - Voir les comptes
+        - Recherche d'un compte
+        - Recherche d'un client
 
 ## TP 5 : Gérer les références 
 
