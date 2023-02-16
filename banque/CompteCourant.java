@@ -9,7 +9,9 @@ public class CompteCourant {
     String intitule = "Compte courant";
     float decouvertMaxAutorise = 0;
 
-    public CompteCourant() {
+    Client proprietaire;
+
+    public CompteCourant(Client client) {
 
         updateDecouvertMaxAutorise();
 
@@ -17,9 +19,11 @@ public class CompteCourant {
 
         this.numero = getNbCompteOuvert();
 
+        this.proprietaire = client;
+
     }
 
-    public CompteCourant(float montant) {
+    public CompteCourant(Client client, float montant) {
         this.montant = montant;
 
         updateDecouvertMaxAutorise();
@@ -27,9 +31,11 @@ public class CompteCourant {
         addAnAccount();
 
         this.numero = getNbCompteOuvert();
+
+        this.proprietaire = client;
     }
 
-    public CompteCourant(float montant, String intitule) {
+    public CompteCourant(Client client, float montant, String intitule) {
         this.montant = montant;
         this.intitule = intitule;
 
@@ -38,6 +44,8 @@ public class CompteCourant {
         addAnAccount();
 
         this.numero = getNbCompteOuvert();
+
+        this.proprietaire = client;
     }
 
     public static void transfert(CompteCourant compteA, CompteCourant compteB, float montant) {
@@ -122,6 +130,10 @@ public class CompteCourant {
 
     public float getDecouvertMaxAutorise() {
         return decouvertMaxAutorise;
+    }
+
+    public Client getProprietaire() {
+        return proprietaire;
     }
 
     public String resume() {

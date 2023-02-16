@@ -56,12 +56,16 @@ _jour 2 : à venir_
         - Voir les comptes
         - Recherche d'un compte
         - Recherche d'un client
-
-## TP 5 : Gérer les références 
+    
+## TP 5 : Début de l'héritage
 
 _jour 2 : à venir_
 
-- XXXXX
+- Créer une class CompteEpargne, un compte epargne n'a pas de de découvert autorisé, pas de type de carte et ne peux faire de transferts d'argents qu'avec les autres comptes de son proprietaire.
+- On souhaite faire en sorte que la banque ai une liste de tous les comptes courant comme epargne (dans une même liste).
+- On souhaite avoir une méthode qui permette de faire des transfert entre deux comptes (courant comme epargne en en respectant les règles)
+
+Faites les modifications nécessaire et tester les dans votre Main.
 
 ## TP 6 : Les interfaces
 

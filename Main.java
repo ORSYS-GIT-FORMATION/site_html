@@ -1,17 +1,19 @@
 package com.orsys;
 
+import com.orsys.banque.Client;
 import com.orsys.banque.CompteCourant;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        Client client = new Client("Jean", "Baptiste");
 
-        CompteCourant compte1 = new CompteCourant();
+        CompteCourant compte1 = new CompteCourant(client);
 
-        CompteCourant compte2 = new CompteCourant(2000, "Mon compte perso");
+        CompteCourant compte2 = new CompteCourant(client, 2000, "Mon compte perso");
 
-        CompteCourant compte3 = new CompteCourant(4000);
+        CompteCourant compte3 = new CompteCourant(client, 4000);
 
         System.out.println(compte1.resume());
 
@@ -38,6 +40,9 @@ public class Main {
         System.out.println(compte1.resume());
 
         System.out.println(compte2.resume());
+
+        System.out.println("====================================");
+
 
     }
 }
