@@ -1,4 +1,4 @@
-package com.orsys;
+package com.orsys.garage;
 
 public class Vehicule {
 

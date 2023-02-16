@@ -26,16 +26,25 @@ Réaliser vos tests dans votre fichier Main.java.
 
 _jour 2 : à venir_
 
-- On souahite maintenant créer la classe Banque. Une banque est identifié par un nom, une adresse, une date de création, un ensemble de clients et un ensemble de comptes.
+- On souhaite maintenant créer la classe Banque. Une banque est identifié par un nom, une adresse, une date de création, un ensemble de clients et un ensemble de comptes.
 - Vous pouvez stocker ces clients avec un tableau en attendant d'en savoir plus sur les autres conteneurs disponibles.
 - Créer une classe Client. Un client est identifié par un nom, prénom, date de naissance, date d'ouverture du premier compte dans la banque.
-- On va maintenant modifié
+- On va maintenant ajouter à notre compte un client qui le posséde.
+- Faites une méthode dans Banque qui affiche la liste des clients.
+
+Après avoir vu les énumérations :
+
+- Ajouter un champ typeCarte à la classe CompteCourant. Les types de cartes sont les suivants : {JEUNE, RETRAIT, CLASSIC, SILVER, GOLD, SPECIAL}
 
 ## TP 4 : Organiser notre projet
 
 _jour 2 : à venir_
 
-- XXXXX
+- Le projet commence à se compléter on va donc essayer de le mettre en forme et de l'organiser.
+- Créer un package banque dans lequel vous allez mettre toutes les classes réaliser jusqu'ici (vous pouvez organiser autrement si vous le souhaitez)
+- Maintenant que l'on utilise les classes en dehors de leur package il faut faire attention aux éléments public/potected/private. Corriger si necessaire.
+- Nous allons réaliser un semblant d'application de gestion.
+- Dans la classe main réaliser un Menu qui présente les différentes opérations : au démarage 
 
 ## TP 5 : Gérer les références 
 

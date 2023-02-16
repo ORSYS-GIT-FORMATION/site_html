@@ -1,4 +1,4 @@
-package com.orsys;
+package com.orsys.banque;
 
 public class CompteCourant {
 
@@ -37,6 +37,27 @@ public class CompteCourant {
         addAnAccount();
 
         this.numero = getNbCompteOuvert();
+    }
+
+    public static void transfert(CompteCourant compteA, CompteCourant compteB, int montant) {
+
+        if (montant < 0) {
+
+            if ((compteA.getMontant() + compteA.getDecouvertMaxAutorise()) >= montant) {
+
+
+
+            }
+        } else if (montant > 0) {
+
+
+
+        } else {
+
+            return;
+
+        }
+
     }
 
     public void updateDecouvertMaxAutorise() {

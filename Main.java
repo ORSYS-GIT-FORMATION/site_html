@@ -1,6 +1,6 @@
 package com.orsys;
 
-import java.util.Scanner;
+import com.orsys.banque.CompteCourant;
 
 public class Main {
 
@@ -23,7 +23,13 @@ public class Main {
 
         System.out.println(compte1.resume());
 
-        System.out.println(CompteCourant.getNbCompteOuvert());
+        //System.out.println(CompteCourant.getNbCompteOuvert());
+
+        CompteCourant.transfert(compte1, compte2, 1000);
+
+        System.out.println(compte1.resume());
+
+        System.out.println(compte1.resume());
 
     }
 }
