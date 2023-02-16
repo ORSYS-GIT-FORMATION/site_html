@@ -46,16 +46,17 @@ _jour 2 : à venir_
 - Nous allons réaliser un semblant d'application de gestion.
 - Dans la classe main réaliser deux Menu qui présentent les différentes opérations possible : 
     - Premier menu :
-        - Création d'une banque
-        - Gérer une banque
-        - Voir mes banques
-        - Quitter
+        - Création d'une banque (créer un objet banque)
+        - Gérer une banque (aller au menu suivi pour gérer la banque choisi)
+        - Voir mes banques (afficher la liste des banques créer)
+        - Quitter (arreter le programme)
     - Si l'on choisit de gérer une banque :
-        - Ajouter un compte
-        - Faire un transfert
-        - Voir les comptes
-        - Recherche d'un compte
-        - Recherche d'un client
+        - Ajouter un compte : demander à l'utilisateur de saisir les informations necessaire (nom, montant) pour le client proposer deux options. Choisir un client existant (on affiche une liste et l'utilisateur entre le nom ou un numero) soit créer un nouvelle utilisateur qui possedera ce compte.
+        - Faire un transfert : Demander le numero du compte a debiter puis le numero du compte crediter et enfin le montant à l'utilisateur. Afficher un message d'erreur si le montant du debiteur est insuffisant.
+        - Voir les comptes : On affiche les informations de tous les comptes
+        - Recherche d'un compte : On entre le numero d'un compte pour le retrouver
+        - Recherche d'un client : On entre un nom et l'application affiche tous les utilisateurs qui ont ce nom (potentiellement plusieurs) et propose d'afficher les comptes asocie.
+        - Exit (revenir au menu précédent)
     
 ## TP 5 : Début de l'héritage
 
