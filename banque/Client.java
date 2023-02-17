@@ -19,5 +19,46 @@ public class Client {
 
     }
 
+    public String getNom() {
+        return nom;
+    }
 
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public LocalDateTime getDateDeNaissance() {
+        return dateDeNaissance;
+    }
+
+    public void setDateDeNaissance(LocalDateTime dateDeNaissance) {
+        this.dateDeNaissance = dateDeNaissance;
+    }
+
+    public LocalDateTime getDateCreationCompte() {
+        return dateCreationCompte;
+    }
+
+    public void setDateCreationCompte(LocalDateTime dateCreationCompte) {
+        this.dateCreationCompte = dateCreationCompte;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", dateDeNaissance=" + dateDeNaissance +
+                ", dateCreationCompte=" + dateCreationCompte +
+                '}';
+    }
 }
