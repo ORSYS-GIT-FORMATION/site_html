@@ -62,11 +62,20 @@ _jour 2 : à venir_
 
 _jour 2 : à venir_
 
-- Créer une class CompteEpargne, un compte epargne n'a pas de de découvert autorisé, pas de type de carte et ne peux faire de transferts d'argents qu'avec les autres comptes de son proprietaire.
-- On souhaite faire en sorte que la banque ai une liste de tous les comptes courant comme epargne (dans une même liste).
-- On souhaite avoir une méthode qui permette de faire des transfert entre deux comptes (courant comme epargne en en respectant les règles)
+- Créer une classe CompteEpargne, un compte epargne n'a pas de de découvert autorisé, pas de type de carte et ne peux faire de transferts d'argents qu'avec les autres comptes de son proprietaire. (héritage)
+- On souhaite faire en sorte que la banque ai une liste de tous les comptes courant comme epargne (dans une même liste). (Travail sur les types)
+- On souhaite avoir une méthode qui permette de faire des transfert entre deux comptes (courant comme epargne en en respectant les règles) (polymorphisme)
 
 Faites les modifications nécessaire et tester les dans votre Main.
+
+- On souhaite ensuite créer une classe Registre qui va contenir des Operations (une autre classe). La classe operations ne doit pas être modifiable. Et on peut seulement ajouter des operations au registre pas en retirer. (immutabilité)
+- Chaque transfert est enregistré dans le registre (une nouvelle operations) avec les informations suivantes (numero compte debité,numero compte credité, montant, date et heure de l'operation).
+
+Faites les modifications et tester.
+
+- Il n'y a pas de Compte générique, la classe sert simplement a rassemblé des informations commune... c'est une classe abstraite ! Declarer la comme tel et définisser sa ou ses méthodes abstraite.
+
+Faites les modifications et tester
 
 ## TP 6 : Les interfaces
 
