@@ -2,23 +2,43 @@ package com.orsys.banque;
 
 public abstract class Compte {
 
+    //############ Attributs statiques #################
+
+    private static int nbCompteOuvert = 0;
+
+    //############ Attributs d'instance #################
+
     private int numero;
     private float montant = 0;
     private String intitule = "Compte courant";
 
     private final Client proprietaire;
 
-    public Compte(Client client) {
-
-        this.proprietaire = client;
-
-
-    }
+    //############ Constructeur #################
 
     public Compte(Client client, float montant) {
 
         this.proprietaire = client;
 
+        this.intitule = "Compte en banque";
+        this.montant = montant;
+
+        this.numero = getNbCompteOuvert();
+
+        addAnAccount();
+
+    }
+
+    public Compte(Client client) {
+
+        this.proprietaire = client;
+
+        this.intitule = "Compte en banque";
+        this.montant = 0;
+
+        this.numero = getNbCompteOuvert();
+
+        addAnAccount();
 
     }
 
@@ -26,8 +46,16 @@ public abstract class Compte {
 
         this.proprietaire = client;
 
+        this.intitule = intitule;
+        this.montant = montant;
+
+        this.numero = getNbCompteOuvert();
+
+        addAnAccount();
 
     }
+
+    //############ Méthodes d'instances #################
 
     public int getNumero() {
         return numero;
@@ -72,4 +100,19 @@ public abstract class Compte {
                 ", intitule='" + intitule + '\'' +
                 '}';
     }
+
+    //################## Méthodes statiques #######################
+
+    static void addAnAccount() {
+
+        nbCompteOuvert ++;
+
+    }
+
+    static int getNbCompteOuvert() {
+
+        return nbCompteOuvert;
+
+    }
+
 }

@@ -81,7 +81,17 @@ Faites les modifications et tester
 
 _jour 2 : à venir_
 
-- XXXXX
+Partie 1 :
+
+- Avant de créer nos propes interfaces essayont d'implemente celles qui existent. Nous avons besoin de pouvoir trier facilement les comptes et les employes d'une banque. On souhaite que la condition suivante client1 > client2 renvoie true si jamais client1 a plus d'argent (sur tous ses comptes) que client1 et false si inversement. On souhaite que compte1 > compte renvoi vrai si le montant de compte1 est plus important que celui de compte2.
+- Dans l'option "afficher les comptes" du menu faites en sorte que l'affichage respecte cette ordre.
+- Ajouter un afffichage des clients selon les mêmes modalités.
+
+Réaliser les modifications et tester.
+
+Partie 2 : 
+
+- On va maintenant créer notre propre interface. Pour cela on va commencer par créer deux nouvelles classes.
 
 ## TP 7 : Maitrise de l'héritage et du polymorphisme
 

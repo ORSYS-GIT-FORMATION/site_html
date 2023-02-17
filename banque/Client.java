@@ -51,14 +51,4 @@ public class Client {
         this.dateCreationCompte = dateCreationCompte;
     }
 
-
-    @Override
-    public String toString() {
-        return "Client{" +
-                "nom='" + nom + '\'' +
-                ", prenom='" + prenom + '\'' +
-                ", dateDeNaissance=" + dateDeNaissance +
-                ", dateCreationCompte=" + dateCreationCompte +
-                '}';
-    }
 }
