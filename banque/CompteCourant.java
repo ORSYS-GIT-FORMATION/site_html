@@ -4,25 +4,7 @@ public final class CompteCourant extends Compte {
 
     private static int nbCompteOuvert = 0;
 
-    // public : tous le monde y a accès
-
-    // protected : tous le package y a accès
-
-    // private : cette classe y a accès
-
-    private float decouvertMaxAutorise = 0; // cet element est propre a CompteCourant
-
-    private final Client proprietaire;
-
-    //private final Date x = 0;
-
-    // x.setMonth(JUNE)  // OK
-
-    // x = Date.now() // Pas OK
-
-    // proprietaire = nouveauClient; // interdis
-
-    // proprietaire.replace(); // Autoriser
+    private float decouvertMaxAutorise = 0;
 
     public CompteCourant(Client client) {
 
@@ -136,35 +118,22 @@ public final class CompteCourant extends Compte {
 
     //======= Méthodes publiques ============
 
-    public float getMontant() {
-        return montant;
-    }
 
+    @Override
     public void setMontant(float montant) {
-        this.montant = montant;
+        this.setMontant(montant);
 
         this.updateDecouvertMaxAutorise();
-    }
-
-    public String getIntitule() {
-        return intitule;
-    }
-
-    public void setIntitule(String intitule) {
-        this.intitule = intitule;
     }
 
     public float getDecouvertMaxAutorise() {
         return decouvertMaxAutorise;
     }
 
-    public Client getProprietaire() {
-        return proprietaire;
-    }
-
+    @Override
     public String resume() {
 
-        return "Le compte numéro " + this.getNumero() + " (" + this.getIntitule() + ") à un solde de " + this.getMontant() + " et un découvert autorisé de " + this.getDecouvertMaxAutorise();
+        return "Le compte numéro " + this.getNumero() + " (" + this.getIntitule() + ") à un solde de " + this.getMontant() + " et un découvert autorisé de " + this.getDecouvertMaxAutorise() + ".\nIl s'agit d'un compte courant.";
 
     }
 
@@ -180,4 +149,6 @@ public final class CompteCourant extends Compte {
 
     }
 
+
 }
+

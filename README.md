@@ -14,7 +14,7 @@ Réaliser des tests avec votre classe dans le fichier Main.java.
 
 ## TP 2 : Interaction entre les objets et méthodes statiques
 
-_jour 2 : à faire_
+_jour 2 : Correction disponnible_
 
 - Compléter votre classe avec un attribut permettant d'avoir le nombre de compte ouvert.
 - Utiliser cet attribut pour générer automatiquement un numéro de compte unique.
@@ -24,7 +24,7 @@ Réaliser vos tests dans votre fichier Main.java.
 
 ## TP 3 : Classes Banque et Client
 
-_jour 2 : à venir_
+_jour 2 : Correction disponnible_
 
 - On souhaite maintenant créer la classe Banque. Une banque est identifié par un nom, une adresse, une date de création, un ensemble de clients et un ensemble de comptes.
 - Vous pouvez stocker ces clients avec un tableau en attendant d'en savoir plus sur les autres conteneurs disponibles.
@@ -38,7 +38,7 @@ Après avoir vu les énumérations :
 
 ## TP 4 : Organiser notre projet
 
-_jour 2 : à venir_
+_jour 3 : à venir_
 
 - Le projet commence à se compléter on va donc essayer de le mettre en forme et de l'organiser.
 - Créer un package banque dans lequel vous allez mettre toutes les classes réaliser jusqu'ici (vous pouvez organiser autrement si vous le souhaitez)
@@ -60,16 +60,16 @@ _jour 2 : à venir_
     
 ## TP 5 : Début de l'héritage
 
-_jour 2 : à venir_
+_jour 3 : à venir_
 
 - Créer une classe CompteEpargne, un compte epargne n'a pas de de découvert autorisé, pas de type de carte et ne peux faire de transferts d'argents qu'avec les autres comptes de son proprietaire. (héritage)
-- On souhaite faire en sorte que la banque ai une liste de tous les comptes courant comme epargne (dans une même liste). (Travail sur les types)
+- On souhaite faire en sorte que la banque ai une liste de tous les comptes courant comme epargne (dans une même liste).(Travail sur les types) => Créer une classe mére commune : Compte.
 - On souhaite avoir une méthode qui permette de faire des transfert entre deux comptes (courant comme epargne en en respectant les règles) (polymorphisme)
 
 Faites les modifications nécessaire et tester les dans votre Main.
 
 - On souhaite ensuite créer une classe Registre qui va contenir des Operations (une autre classe). La classe operations ne doit pas être modifiable. Et on peut seulement ajouter des operations au registre pas en retirer. (immutabilité)
-- Chaque transfert est enregistré dans le registre (une nouvelle operations) avec les informations suivantes (numero compte debité,numero compte credité, montant, date et heure de l'operation).
+- Chaque transfert est enregistré dans le registre (une nouvelle operations) avec les informations suivantes (numero compte debité,numero compte credité, montant, date et heure de l'opération).
 
 Faites les modifications et tester.
 

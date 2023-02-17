@@ -10,7 +10,7 @@ public class Banque {
 
     Client clients[];
 
-    CompteCourant comptes[];
+    Compte comptes[];
 
     public Banque(String nom, String adresse) {
 

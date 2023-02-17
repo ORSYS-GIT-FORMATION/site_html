@@ -1,17 +1,31 @@
 package com.orsys.banque;
 
-public class Compte {
+public abstract class Compte {
 
-    int numero;
-    float montant = 0;
-    String intitule = "Compte courant";
+    private int numero;
+    private float montant = 0;
+    private String intitule = "Compte courant";
 
-    public Compte(float x) {
+    private final Client proprietaire;
 
-        this.montant = x;
+    public Compte(Client client) {
 
-        System.out.println("Construteur Compte");
-        // Sera appele en premier lors de la création d'un CompteCourant
+        this.proprietaire = client;
+
+
+    }
+
+    public Compte(Client client, float montant) {
+
+        this.proprietaire = client;
+
+
+    }
+
+    public Compte(Client client, float montant, String intitule) {
+
+        this.proprietaire = client;
+
 
     }
 
@@ -22,6 +36,7 @@ public class Compte {
     public void setNumero(int numero) {
         this.numero = numero;
     }
+
 
     public float getMontant() {
         return montant;
@@ -44,6 +59,8 @@ public class Compte {
         System.out.println("Compte standard");
 
     }
+
+    public abstract String resume();
 
     //System.out.println(compte) => J'appelle toString()
     // String

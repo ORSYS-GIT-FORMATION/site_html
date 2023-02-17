@@ -1,83 +1,95 @@
 package com.orsys;
 
-import com.orsys.banque.Client;
-import com.orsys.banque.CompteCourant;
-
-import java.util.Objects;
 
 public class Main {
 
 
     public static void main(String[] args) {
-/*
-        Client client = new Client("Jean", "Baptiste");
 
-        CompteCourant compte1 = new CompteCourant(client);
-
-        CompteCourant compte2 = new CompteCourant(client, 2000, "Mon compte perso");
-
-        CompteCourant compte3 = new CompteCourant(client, 4000);
-
-        System.out.println(compte1.resume());
-
-        System.out.println(compte2.resume());
-
-        System.out.println(compte3.resume());
-
-        compte1.setMontant(1500);
-
-        System.out.println(compte1.resume());
-
-        System.out.println(compte2.resume());
-
-        //System.out.println(CompteCourant.getNbCompteOuvert());
-
-        CompteCourant.transfert(compte1, compte2, 1000);
-
-        System.out.println(compte1.resume());
-
-        System.out.println(compte2.resume());
-
-        CompteCourant.transfert(compte1, compte2, 600);
-
-        System.out.println(compte1.resume());
-
-        System.out.println(compte2.resume());
-
-        System.out.println("====================================");
-
-        compte1.setNumero(10);
-
-        String test = "Valeur"; // a1
-
-        Client clientTest = new Client(test, "Guillaume"); // client b1
-
-        String nouvelleValeur = clientTest.getPrenom().replace("Valeur", "Autre chose"); // a1 => a3
-
-        CompteCourant compteTest = new CompteCourant(clientTest); // b1 Compe() => CompteCourant()
-
-        // Y
-
-        // Construteur de X
-
-        // Constrcteur de Compte => TypeDeRetour Nom(String c, String y)
-
-        // Constrcuteur de CompteCourant
-
-        // compteCourant.test()
-
-        // CompteCourantPerso // CompteCourantPro
-
-        compteTest.getProprietaire().setPrenom("Jacques"); // b1
-
-        clientTest.setPrenom("Jacques");
-
-        System.out.println(compteTest.getProprietaire().getPrenom()); // Jacques
-
-*/
-        Client clientTest = new Client("test", "Guillaume");
-
-        System.out.println(clientTest);
 
     }
 }
+
+
+public class Vegetaux {
+
+    Vegetaux {
+
+        System.out.println("Un nouveau végétaux");
+
+    }
+
+    void affichage() {
+
+        System.out.println("Je suis un végétaux");
+
+    }
+
+}
+
+public class Arbre extends Vegetaux {
+
+    Arbre {
+
+        System.out.println("Un nouvel arbre");
+
+    }
+
+    Arbre (String c) {
+
+
+
+    }
+
+    void affichage() {
+
+        System.out.println("Je suis un végétaux");
+
+    }
+
+}
+
+public class Fleur extends Vegetaux {
+
+    Fleur {
+
+        //super()
+
+        System.out.println("Un nouvel fleur");
+
+    }
+
+    void affichage() {
+
+        System.out.println("Je suis un fleur");
+
+    }
+
+}
+
+// Main
+
+Vegetaux list[] = new Vegetaux[10]; // Création
+
+Arbre arbre = new Arbre(); // a1
+
+Fleur fleur = new Fleur(); // a2
+
+list[0] = arbre; // a1 => Arbre
+
+list[1] = fleur; // a2
+
+list[1].perdSesFeuille();
+
+// Vegetaux.perdSesFeuilles Si c'est un arbre c'est SI c'est une fleur c'est une erreur et je sais le dire
+
+// Compilateur perdSesFeuille ??? Pas necessairement pour un vegetaux
+// Machine virtuelle : C'est bien un arbre
+
+
+
+
+
+
+
+
