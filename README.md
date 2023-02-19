@@ -2,7 +2,7 @@
 
 ## TP 1 : Création de notre premiere classe
 
-_Jour 1 : Correction disponnible_
+_Jour 1 : Correction disponible_
 
 - Créer une classe CompteCourant. Elle comporte les attributs suivant : numéro (identifiant), solde, nom (nom du compte), decouvertAutoriserMax.
 - Cette classe propose trois constructeurs : CompteCourant(numero), CompteCourant(numero, solde), CompteCourant(numero, solde, nom). Dans le cas ou le solde n'est pas donné il est automatiquement mis à 0. Dans le cas ou le nom n'est pas donné un nom par défaut est mis.
@@ -14,17 +14,17 @@ Réaliser des tests avec votre classe dans le fichier Main.java.
 
 ## TP 2 : Interaction entre les objets et méthodes statiques
 
-_jour 2 : Correction disponnible_
+_jour 2 : Correction disponible_
 
 - Compléter votre classe avec un attribut permettant d'avoir le nombre de compte ouvert.
 - Utiliser cet attribut pour générer automatiquement un numéro de compte unique.
-- Créer une méthode qui permet de faire des transfert d'argent entre deux comptes. Voici le prototype de la méthode : transfert(CompteCourant, CompteCourant, montant). Le transfert se fait du premier compte (arg1) au second (arg 2) et peut être positif ou négatif (créditeur ou débiteur).
+- Créer une méthode qui permet de faire des transferts d'argent entre deux comptes. Voici le prototype de la méthode : transfert(CompteCourant, CompteCourant, montant). Le transfert se fait du premier compte (arg1) au second (arg 2) et peut être positif ou négatif (créditeur ou débiteur).
 
 Réaliser vos tests dans votre fichier Main.java.
 
 ## TP 3 : Classes Banque et Client
 
-_jour 2 : Correction disponnible_
+_jour 2 : Correction disponible_
 
 - On souhaite maintenant créer la classe Banque. Une banque est identifié par un nom, une adresse, une date de création, un ensemble de clients et un ensemble de comptes.
 - Vous pouvez stocker ces clients avec un tableau en attendant d'en savoir plus sur les autres conteneurs disponibles.
@@ -66,7 +66,7 @@ _jour 3 : à venir_
 - On souhaite faire en sorte que la banque ai une liste de tous les comptes courant comme epargne (dans une même liste).(Travail sur les types) => Créer une classe mére commune : Compte.
 - On souhaite avoir une méthode qui permette de faire des transfert entre deux comptes (courant comme epargne en en respectant les règles) (polymorphisme)
 
-Faites les modifications nécessaire et tester les dans votre Main.
+Faites les modifications nécessaires et tester les dans votre Main.
 
 - On souhaite ensuite créer une classe Registre qui va contenir des Operations (une autre classe). La classe operations ne doit pas être modifiable. Et on peut seulement ajouter des operations au registre pas en retirer. (immutabilité)
 - Chaque transfert est enregistré dans le registre (une nouvelle operations) avec les informations suivantes (numero compte debité,numero compte credité, montant, date et heure de l'opération).
@@ -83,7 +83,7 @@ _jour 2 : à venir_
 
 Partie 1 :
 
-- Avant de créer nos propes interfaces essayont d'implemente celles qui existent. Nous avons besoin de pouvoir trier facilement les comptes et les employes d'une banque. On souhaite que la condition suivante client1 > client2 renvoie true si jamais client1 a plus d'argent (sur tous ses comptes) que client1 et false si inversement. On souhaite que compte1 > compte renvoi vrai si le montant de compte1 est plus important que celui de compte2.
+- Avant de créer nos propres interfaces essayont d'implementer celles qui existent. Nous avons besoin de pouvoir trier facilement les comptes et les employes d'une banque. On souhaite que la condition suivante client1 > client2 renvoie true si jamais client1 a plus d'argent (sur tous ses comptes) que client1 et false si inversement. On souhaite que compte1 > compte renvoi vrai si le montant de compte1 est plus important que celui de compte2.
 - Dans l'option "afficher les comptes" du menu faites en sorte que l'affichage respecte cette ordre.
 - Ajouter un afffichage des clients selon les mêmes modalités.
 
@@ -91,13 +91,13 @@ Réaliser les modifications et tester.
 
 Partie 2 : 
 
-- On va maintenant créer notre propre interface. Pour cela on va commencer par créer deux nouvelles classes.
+- On va maintenant créer notre propre interface. Pour cela on va commencer par créer deux nouvelles classes. Une classe CompteBloque qui est un compte courant mais qui ne peux pas faire de transfert. Une classe CompteBloqueTemporaire qui est un compte courant mais qui ne peux pas faire de transfert pendant un certain temps (on peut choisir le temps de blocage).
 
 ## TP 7 : Maitrise de l'héritage et du polymorphisme
 
 _jour 3 : à venir_
 
-- XXXXX
+- XXXXXX
 
 ## TP 8 : Gérer les excpetions
 

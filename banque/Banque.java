@@ -8,9 +8,9 @@ public class Banque {
     String adresse;
     LocalDateTime dateDeCreation;
 
-    Client clients[];
+    Client[] clients;
 
-    Compte comptes[];
+    Compte[] comptes;
 
     public Banque(String nom, String adresse) {
 
@@ -24,7 +24,7 @@ public class Banque {
 
     }
 
-    public Client addClient(String nom, String prenom){
+    public void ajouterClient(String nom, String prenom){
 
         Client nouveauClient = new Client(nom, prenom);
 
@@ -34,7 +34,7 @@ public class Banque {
 
                 this.clients[i] = nouveauClient;
 
-                return nouveauClient;
+                return;
 
             }
 
@@ -42,11 +42,9 @@ public class Banque {
 
         System.out.println("Ajout impossible ! Il n'y a plus de place");
 
-        return null;
-
     }
 
-    public CompteCourant addCompte(Client client, String intitule, float montant){
+    public void ajouterCompte(Client client, String intitule, float montant){
 
         CompteCourant nouveauCompte = new CompteCourant(client, montant, intitule);
 
@@ -56,15 +54,13 @@ public class Banque {
 
                 this.comptes[i] = nouveauCompte;
 
-                return nouveauCompte;
+                return;
 
             }
 
         }
 
         System.out.println("Ajout impossible ! Il n'y a plus de place");
-
-        return null;
 
     }
 
@@ -86,7 +82,7 @@ public class Banque {
 
         for (int i=0; i<1000 ; i++) {
 
-            if (this.clients[i] == null){
+            if (this.clients[i] != null){
 
                 System.out.println(this.clients[i]);
 
@@ -117,5 +113,13 @@ public class Banque {
         return "Banque " + nom + '\'' +
                 "situé à l'adresse " + adresse +
                 ", créé le " + dateDeCreation;
+    }
+
+    public Client[] getClients() {
+        return clients;
+    }
+
+    public void setClients(Client[] clients) {
+        this.clients = clients;
     }
 }
