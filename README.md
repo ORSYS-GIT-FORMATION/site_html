@@ -93,9 +93,9 @@ Partie 2 :
 
 - On va maintenant créer notre propres interfaces. On réalise un logiciel de gestion bancaire. On peut imaginer que notre logiciel a différent utilisateurs. En plus des Clients, il nous faut créer des classes Employe et Administrateur représentant deux postes au sein des banques. 
 - On va créer une interface IAuthentifiable qui va permettre de vérifier si un utilisateur est authentifié ou non. Cette interface contient une méthode authentifier qui prend en paramètre un mot de passe et qui renvoie un booléen. On déclare aussi les autres méthode utile à cet usage (getMotDePasse, setMotDePasse, getLogin, setLogin, getLog).
-- Il faut un accès différent aux données et à l'application selon l'utilisateur (ses comptes et )
+- Il faut un accès différent aux données et à l'application selon l'utilisateur (ses comptes pour les clients, les différentes comptes qu'il gére pour un employé, tous les comptes pour l'administrateur)
 
-- XX
+Réaliser les modifications nécessaires et tester.
 
 ## TP 7 : Maitrise de l'héritage et du polymorphisme
 
