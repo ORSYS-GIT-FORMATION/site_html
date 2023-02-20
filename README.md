@@ -79,45 +79,49 @@ Faites les modifications et tester
 
 ## TP 6 : Les interfaces
 
-_jour 2 : à venir_
+_jour 4 : à venir_
 
 Partie 1 :
 
 - Avant de créer nos propres interfaces essayont d'implementer celles qui existent. Nous avons besoin de pouvoir trier facilement les comptes et les employes d'une banque. On souhaite que la condition suivante client1 > client2 renvoie true si jamais client1 a plus d'argent (sur tous ses comptes) que client1 et false si inversement. On souhaite que compte1 > compte renvoi vrai si le montant de compte1 est plus important que celui de compte2.
-- Dans l'option "afficher les comptes" du menu faites en sorte que l'affichage respecte cette ordre.
-- Ajouter un afffichage des clients selon les mêmes modalités.
+- Dans l'option "afficher les comptes" du menu faites en sorte que l'affichage respecte cet ordre.
+- Ajouter un affichage des clients selon les mêmes modalités.
 
 Réaliser les modifications et tester.
 
 Partie 2 : 
 
-- On va maintenant créer notre propre interface. Pour cela on va commencer par créer deux nouvelles classes. Une classe CompteBloque qui est un compte courant mais qui ne peux pas faire de transfert. Une classe CompteBloqueTemporaire qui est un compte courant mais qui ne peux pas faire de transfert pendant un certain temps (on peut choisir le temps de blocage).
+- On va maintenant créer notre propres interfaces. On réalise un logiciel de gestion bancaire. On peut imaginer que notre logiciel a différent utilisateurs. En plus des Clients, il nous faut créer des classes Employe et Administrateur représentant deux postes au sein des banques. 
+- On va créer une interface IAuthentifiable qui va permettre de vérifier si un utilisateur est authentifié ou non. Cette interface contient une méthode authentifier qui prend en paramètre un mot de passe et qui renvoie un booléen. On déclare aussi les autres méthode utile à cet usage (getMotDePasse, setMotDePasse, getLogin, setLogin, getLog).
+- Il faut un accès différent aux données et à l'application selon l'utilisateur (ses comptes et )
+
+- XX
 
 ## TP 7 : Maitrise de l'héritage et du polymorphisme
-
-_jour 3 : à venir_
-
-- XXXXXX
-
-## TP 8 : Gérer les excpetions
-
-_jour 3 : à venir_
-
-- XXXXXX
-
-## TP 9 : Les collections
-
-_jour 3 : à venir_
-
-- XXXXXX
-
-## TP 10 - Les streams 
 
 _jour 4 : à venir_
 
 - XXXXXX
 
-## TP 11 - Serializations 
+## TP 8 : Gérer les excpetions
+
+_jour 4 : à venir_
+
+- XXXXXX
+
+## TP 9 : Les collections
+
+_jour 4 : à venir_
+
+- XXXXXX
+
+## TP 10 - Les streams 
+
+_jour 5 : à venir_
+
+- XXXXXX
+
+## TP 5 - Serializations 
 
 _jour 4 : à venir_
 
@@ -125,13 +129,19 @@ _jour 4 : à venir_
 
 ## TP 12 - Interagir avec les fichiers
 
-_jour 4 : à venir_
+_jour 5 : à venir_
 
 - XXXXXX
 
 ## TP 13 : Design pattern
 
 _jour 5 ; à venir_
+
+- XXXXXX
+
+## TP 14 : Les threads
+
+_jour 5 : à venir_
 
 - XXXXXX
 

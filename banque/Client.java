@@ -61,4 +61,27 @@ public class Client {
         this.dateCreationCompte = dateCreationCompte;
     }
 
+    @Override
+    public int compareTo(Client o) {
+
+        if o.nom > this.nom {
+            return 1;
+        }
+        else if o.nom < this.nom {
+            return -1;
+        }
+        else {
+            if o.prenom > this.prenom {
+                return 1;
+            }
+            else if o.prenom < this.prenom {
+                return -1;
+            }
+            else {
+                return 0;
+            }
+        }
+
+        return 0;
+    }
 }
