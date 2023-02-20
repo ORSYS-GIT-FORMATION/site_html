@@ -83,16 +83,18 @@ _jour 4 : à venir_
 
 Partie 1 :
 
-- Avant de créer nos propres interfaces essayont d'implementer celles qui existent. Nous avons besoin de pouvoir trier facilement les comptes et les employes d'une banque. On souhaite que la condition suivante client1 > client2 renvoie true si jamais client1 a plus d'argent (sur tous ses comptes) que client1 et false si inversement. On souhaite que compte1 > compte renvoi vrai si le montant de compte1 est plus important que celui de compte2.
-- Dans l'option "afficher les comptes" du menu faites en sorte que l'affichage respecte cet ordre.
-- Ajouter un affichage des clients selon les mêmes modalités.
+- Avant de créer nos propres interfaces essayont d'implementer celles qui existent. Nous avons besoin de pouvoir trier facilement les comptes et les clients d'une banque.
+- On souhaite que la condition suivante (client1 > client2) soit vraie si jamais client1 a plus d'argent (sommes sur tous ses comptes) que client2 et faux si client 1 à moins d'argent (ou la même somme) que client 2.
+- De la même manière au niveau des comptes. On souhaite que compte1 > compte2 renvoi vrai si le montant de compte1 est plus important que celui de compte2. Et faux dans les autres cas.
+- Dans l'option "afficher les comptes" du menu faites en sorte que l'affichage respecte cet ordre, même chose pour l'affichage des clients. (ajouter une option "afficher les clients" si elle n'existe pas).
 
 Réaliser les modifications et tester.
 
 Partie 2 : 
 
-- On va maintenant créer notre propres interfaces. On réalise un logiciel de gestion bancaire. On peut imaginer que notre logiciel a différent utilisateurs. En plus des Clients, il nous faut créer des classes Employe et Administrateur représentant deux postes au sein des banques. 
-- On va créer une interface IAuthentifiable qui va permettre de vérifier si un utilisateur est authentifié ou non. Cette interface contient une méthode authentifier qui prend en paramètre un mot de passe et qui renvoie un booléen. On déclare aussi les autres méthode utile à cet usage (getMotDePasse, setMotDePasse, getLogin, setLogin, getLog).
+- On va maintenant créer notre propre interface. On réalise un logiciel de gestion bancaire. On peut imaginer que notre logiciel a différents utilisateurs.
+- En plus des Clients, il nous faut créer des classes Employe et Administrateur représentant deux postes au sein des banques. 
+- On va créer une interface Authentifiable qui va permettre de vérifier si un utilisateur est authentifié ou non. Cette interface contient une méthode authentifier qui prend en paramètre un mot de passe et qui renvoie un booléen. On déclare aussi les autres méthodes utilent à cet usage (getMotDePasse, setMotDePasse, getLogin, setLogin, getLog).
 - Il faut un accès différent aux données et à l'application selon l'utilisateur (ses comptes pour les clients, les différentes comptes qu'il gére pour un employé, tous les comptes pour l'administrateur)
 
 Réaliser les modifications nécessaires et tester.
