@@ -2,7 +2,7 @@ package com.orsys.banque;
 
 import java.time.LocalDateTime;
 
-public class Client {
+public class Client implements Comparable<Client> {
 
     String nom;
     String prenom;
@@ -64,22 +64,8 @@ public class Client {
     @Override
     public int compareTo(Client o) {
 
-        if o.nom > this.nom {
+        if (this.nom == o.nom) {
             return 1;
-        }
-        else if o.nom < this.nom {
-            return -1;
-        }
-        else {
-            if o.prenom > this.prenom {
-                return 1;
-            }
-            else if o.prenom < this.prenom {
-                return -1;
-            }
-            else {
-                return 0;
-            }
         }
 
         return 0;

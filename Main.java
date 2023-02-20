@@ -251,7 +251,7 @@ public class Main {
 
         banques.add(banque);
 
-        // On reproduit l'operation pour une deuxieme banque
+        // On reproduit l'opération pour une deuxième banque
 
         Banque banque2 = new Banque("Banque de test 2", "BdT2");
 
@@ -284,13 +284,6 @@ public class Main {
         // Fin du programme
 
         System.out.println("© 2023 - Gestionnaire d'agence bancaire - Tous droits réservés");
-
-        if (client1 < client1) {
-
-            XXXXX
-
-        }
-
     }
 }
 
