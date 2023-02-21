@@ -16,7 +16,7 @@ Réaliser des tests avec votre classe dans le fichier Main.java.
 
 _jour 2 : Correction disponible_
 
-- Compléter votre classe avec un attribut permettant d'avoir le nombre de compte ouvert.
+- Compléter votre classe avec un attribut permettant d'avoir le nombre de comptes ouvert.
 - Utiliser cet attribut pour générer automatiquement un numéro de compte unique.
 - Créer une méthode qui permet de faire des transferts d'argent entre deux comptes. Voici le prototype de la méthode : transfert(CompteCourant, CompteCourant, montant). Le transfert se fait du premier compte (arg1) au second (arg 2) et peut être positif ou négatif (créditeur ou débiteur).
 
@@ -26,7 +26,7 @@ Réaliser vos tests dans votre fichier Main.java.
 
 _jour 2 : Correction disponible_
 
-- On souhaite maintenant créer la classe Banque. Une banque est identifié par un nom, une adresse, une date de création, un ensemble de clients et un ensemble de comptes.
+- On souhaite maintenant créer la classe Banque. Une banque est identifiée par un nom, une adresse, une date de création, un ensemble de clients et un ensemble de comptes.
 - Vous pouvez stocker ces clients avec un tableau en attendant d'en savoir plus sur les autres conteneurs disponibles.
 - Créer une classe Client. Un client est identifié par un nom, prénom, date de naissance, date d'ouverture du premier compte dans la banque.
 - On va maintenant ajouter à notre compte un client qui le posséde.
@@ -42,9 +42,9 @@ _jour 3 : à venir_
 
 - Le projet commence à se compléter on va donc essayer de le mettre en forme et de l'organiser.
 - Créer un package banque dans lequel vous allez mettre toutes les classes réaliser jusqu'ici (vous pouvez organiser autrement si vous le souhaitez)
-- Maintenant que l'on utilise les classes en dehors de leur package il faut faire attention aux éléments public/potected/private. Corriger si necessaire.
+- Maintenant que l'on utilise les classes en dehors de leur package, il faut faire attention aux éléments public/potected/private. Corriger si necessaire.
 - Nous allons réaliser un semblant d'application de gestion.
-- Dans la classe main réaliser deux Menu qui présentent les différentes opérations possible : 
+- Dans la classe main réaliser deux Menus qui présentent les différentes opérations possibles : 
     - Premier menu :
         - Création d'une banque (créer un objet banque)
         - Gérer une banque (aller au menu suivi pour gérer la banque choisi)
@@ -52,9 +52,9 @@ _jour 3 : à venir_
         - Quitter (arrêter le programme)
     - Si l'on choisit de gérer une banque :
         - Ajouter un compte : demander à l'utilisateur de saisir les informations nécessaire (nom, montant) pour le client proposer deux options. Choisir un client existant (on affiche une liste et l'utilisateur entre le nom ou un numero) soit créer un nouvelle utilisateur qui possedera ce compte.
-        - Faire un transfert : Demander le numéro du compte a debiter puis le numéro du compte créditer et enfin le montant à l'utilisateur. Afficher un message d'erreur si le montant du debiteur est insuffisant.
+        - Faire un transfert : Demander le numéro du compte à débiter puis le numéro du compte créditer et enfin le montant à l'utilisateur. Afficher un message d'erreur si le montant du debiteur est insuffisant.
         - Voir les comptes : On affiche les informations de tous les comptes
-        - Recherche d'un compte : On entre le numero d'un compte pour le retrouver
+        - Recherche d'un compte : On entre le numéro d'un compte pour le retrouver
         - Recherche d'un client : On entre un nom et l'application affiche tous les utilisateurs qui ont ce nom (potentiellement plusieurs) et propose d'afficher les comptes asocie.
         - Exit (revenir au menu précédent)
     
@@ -64,7 +64,7 @@ _jour 3 : à venir_
 
 - Créer une classe CompteEpargne, un compte épargne n'a pas de découvert autorisé, pas de type de carte et ne peux faire de transferts d'argents qu'avec les autres comptes de son propriétaire. (héritage)
 - On souhaite faire en sorte que la banque ai une liste de tous les comptes courant comme épargne (dans une même liste).(Travail sur les types) => Créer une classe mère commune : Compte.
-- On souhaite avoir une méthode qui permette de faire des transfert entre deux comptes (courant comme épargne en respectant les règles) (polymorphisme)
+- On souhaite avoir une méthode qui permette de faire des transferts entre deux comptes (courant comme épargne en respectant les règles) (polymorphisme)
 
 Faites les modifications nécessaires et tester les dans votre Main.
 
@@ -94,19 +94,19 @@ Partie 2 :
 
 - On va maintenant créer notre propre interface. On réalise un logiciel de gestion bancaire. On peut imaginer que notre logiciel a différents utilisateurs.
 - En plus des Clients, il nous faut créer des classes Employe et Administrateur représentant deux postes au sein des banques. 
-- On va créer une interface Authentifiable qui va permettre de vérifier si un utilisateur est authentifié ou non. Cette interface contient une méthode authentifier qui prend en paramètre un mot de passe et qui renvoie un booléen. On déclare aussi les autres méthodes utilent à cet usage (getMotDePasse, setMotDePasse, getLogin, setLogin, getLog).
+- On va créer une interface Authentifiable qui va permettre de vérifier si un utilisateur est authentifié ou non. Cette interface contient une méthode authentifié qui prend en paramètre un mot de passe et qui renvoie un booléen. On déclare aussi les autres méthodes utilent à cet usage (getMotDePasse, setMotDePasse, getLogin, setLogin, getLog).
 - Il faut un accès différent aux données et à l'application selon l'utilisateur (ses comptes pour les clients, les différents comptes qu'il gère pour un employé, tous les comptes pour l'administrateur)
 
 Réaliser les modifications nécessaires et tester.
 
-## TP 7 : Gérer les excpetions
+## TP 7 : Gérer les exceptions
 
 _jour 4 : à venir_
 
 - On va maintenant gérer les exceptions. On souhaite que l'application ne plante pas si l'utilisateur entre des données incorrectes ou si un comportement imprévu survient.
 - On va commencer par gérer les exceptions liées aux transferts. On souhaite que l'application ne plante pas si l'utilisateur entre un montant négatif ou un montant supérieur au solde (+ découvert) du compte débité.
 - Créer deux nouvelles exceptions : MontantNegatifException et SoldeInsuffisantException. Ces exceptions sont lancé dans la méthode transfert de la classe Compte. On souhaite que ces exceptions soient gérées dans le Main. On souhaite que l'utilisateur soit informé de l'erreur et qu'il puisse réessayer. Il faut donc propager ces exceptions.
-- Ajouter un message d'erreur à vos exceptions et afficher le en cas d'erreur.
+- Ajouter un message d'erreur à vos exceptions et afficher en cas d'erreur.
 - On souhaite maintenant gérer les exceptions liées à la création d'un compte. On souhaite que l'application ne plante pas si l'utilisateur entre un nom de client (ou ID) qui n'existe pas.
 - Créer une nouvelle exception : ClientInconnuException. Cette exception est lancé dans la méthode ajouterCompte de la classe Banque. On souhaite que cette exception soit gérée dans le Main. On souhaite que l'utilisateur soit informé de l'erreur et qu'il puisse réessayer. Il faut donc propager cette exception.
 
@@ -119,36 +119,26 @@ Faites les modifications nécessaires et tester.
 
 _jour 4 : à venir_
 
-- Vous pouvez remplacer les tableaux JAVA, peut pratique par la Collection qui vous semblera le plus approprié. (ArrayList, LinkedList, HashSet, TreeSet, HashMap, TreeMap, ...)
+- Vous pouvez remplacer les tableaux JAVA, peu pratique par la Collection qui vous semblera le plus approprié. (ArrayList, LinkedList, HashSet, TreeSet, HashMap, TreeMap, ...)
 - Vous pouvez maintenant trier en utilisant la méthode sort de la classe Collections. (Collections.sort(liste);)
 - Créer vos propres classes qui implémentent l'interface Comparator. Et tester les différentes méthodes de tri.
 - Proposer lors de l'affichage dans le menu, des banques, clients et comptes les différents types de tri possible.
 
 Faites les modifications nécessaires et tester.
 
-## TP 10 - Les streams 
-
-_jour 5 : à venir_
-
-- XXXXXX
-
-## TP 5 - Serializations 
-
-_jour 4 : à venir_
-
-- XXXXXX
-
-## TP 12 - Interagir avec les fichiers
-
-_jour 5 : à venir_
-
-- XXXXXX
+- Ajouter les exceptions nécessaires dans les méthodes permettant de gérer les collections. (CompteNonTrouvé ect...)
 
 ## TP 13 : Design pattern
 
 _jour 5 ; à venir_
 
-- XXXXXX
+- A ce stade, vous avez surement une classe Applications / Gestionnaire / Menu que vous instanciez dans le main et qui contient vos banques, les menus et la logique ascociée.
+- Si ce n'est pas le cas :
+  - créer une classe gestionnaire. Cette classe doit contenir la liste des banques existantes, les méthodes permettant de gérer les banques, les clients et les comptes. (ajouter, supprimer, modifier, ...).
+  - Votre main ne doit contenir que l'instanciation et l'appel à la méthode MenuPrincipal (la méthode principale) de votre gestionnaire.
+- Si c'est le cas ou une fois fait :
+  - Appliquer le design pattern Singleton à votre classe Gestionnaire. Il ne peut en exister qu'une seule instance.
+  - Appliquer le design pattern Factory à votre classe Banque : BanqueFactory.
 
 ## TP 14 : Les threads
 

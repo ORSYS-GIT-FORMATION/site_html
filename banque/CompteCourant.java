@@ -1,12 +1,15 @@
 package com.orsys.banque;
 
+import com.orsys.banque.exception.ClientInvalideException;
+import com.orsys.banque.exception.MontantInitialInvalideException;
+
 public final class CompteCourant extends Compte {
 
     private static int nbCompteOuvert = 0;
 
     private float decouvertMaxAutorise = 0;
 
-    public CompteCourant(Client client, float montant, String intitule) {
+    public CompteCourant(Client client, float montant, String intitule) throws ClientInvalideException, MontantInitialInvalideException {
 
         super(client, montant, intitule);
 

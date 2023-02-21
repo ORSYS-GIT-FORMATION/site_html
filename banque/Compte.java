@@ -1,5 +1,8 @@
 package com.orsys.banque;
 
+import com.orsys.banque.exception.ClientInvalideException;
+import com.orsys.banque.exception.MontantInitialInvalideException;
+
 public abstract class Compte {
 
     //############ Attributs statiques #################
@@ -16,11 +19,20 @@ public abstract class Compte {
 
     //############ Constructeur #################
 
-    public Compte(Client client, float montant) {
+    public Compte(Client client, float montant) throws ClientInvalideException, MontantInitialInvalideException {
+
+        if (client == null) {
+            throw new ClientInvalideException("Le client est invalide");
+        }
 
         this.proprietaire = client;
 
         this.intitule = "Compte en banque";
+
+        if (montant < 0) {
+            throw new MontantInitialInvalideException();
+        }
+
         this.montant = montant;
 
         this.numero = getNbCompteOuvert();

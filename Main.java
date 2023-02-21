@@ -2,13 +2,16 @@ package com.orsys;
 
 import com.orsys.banque.Banque;
 import com.orsys.banque.Client;
+import com.orsys.banque.CompteCourant;
+import com.orsys.banque.exception.ClientInvalideException;
+import com.orsys.banque.exception.MontantInitialInvalideException;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
-    private static final ArrayList<Banque> banques = new ArrayList<>();
+    private static final ArrayList<Banque> banques = new ArrayList<>(); // Liste des banques
 
     public static void menuPrincipal() {
 
@@ -269,6 +272,24 @@ public class Main {
 
         banques.add(banque2);
 
+        // arrive à une étape ou on va utiliser du code qui peut générer des exceptions
+
+        try {
+            // Il peut y avoir une exception si le montant est négatif ou si le client est vidde
+            CompteCourant compteCourant = new CompteCourant(new Client("Test", "Test"), 1000, "Mon compte");
+        } catch (MontantInitialInvalideException e) {
+                // Si jamais une exception est levée, on peut agir
+                System.out.println("Une erreur est survenue : Veuillez tester à nouveau");
+        } catch (ClientInvalideException e) {
+            // Si jamais une exception est levée, on peut agir
+            System.out.println("Une erreur est survenue : Veuillez tester à nouveau");
+        } catch (Exception e) {
+                // Si jamais une exception est levée, on peut agir
+                System.out.println("Une erreur est survenue : Veuillez tester à nouveau");
+        } finally {
+            // On peut faire quelque chose dans tous les cas
+            System.out.println("Fin du test");
+        }
     }
 
     public static void main(String[] args) {
