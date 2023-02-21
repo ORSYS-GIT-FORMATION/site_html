@@ -5,7 +5,7 @@
 _Jour 1 : Correction disponible_
 
 - Créer une classe CompteCourant. Elle comporte les attributs suivants : numéro (identifiant), solde, nom (nom du compte), decouvertAutoriserMax.
-- Cette classe propose trois constructeurs : CompteCourant(numéro), CompteCourant(numero, solde), CompteCourant(numero, solde, nom). Dans le cas ou le solde n'est pas donné il est automatiquement mis à 0. Dans le cas ou le nom n'est pas donné un nom par défaut est mis.
+- Cette classe propose trois constructeurs : CompteCourant(numéro), CompteCourant(numéro, solde), CompteCourant(numero, solde, nom). Dans le cas ou le solde n'est pas donné il est automatiquement mis à 0. Dans le cas ou le nom n'est pas donné un nom par défaut est mis.
 - Générer les getters et les setters nécessaires. 
 - Réaliser une méthode resume() qui retourne une chaine formatée faisant le résumé des informations du compte les informations du compte.
 - Le découvert max autorisé à l'instant T est égale à la moitié du solde du compte à l'instant T. Cet attribut doit être mis à jour automatiquement lorsque le solde change.
@@ -132,7 +132,7 @@ Faites les modifications nécessaires et tester.
 
 _jour 5 ; à venir_
 
-- A ce stade, vous avez surement une classe Applications / Gestionnaire / Menu que vous instanciez dans le main et qui contient vos banques, les menus et la logique ascociée.
+- A ce stade, vous avez surement une classe Applications / Gestionnaire / Menu que vous instanciez dans le Main et qui contient vos banques, les menus et la logique ascociée.
 - Si ce n'est pas le cas :
   - créer une classe gestionnaire. Cette classe doit contenir la liste des banques existantes, les méthodes permettant de gérer les banques, les clients et les comptes. (ajouter, supprimer, modifier, ...).
   - Votre main ne doit contenir que l'instanciation et l'appel à la méthode MenuPrincipal (la méthode principale) de votre gestionnaire.
@@ -145,3 +145,28 @@ _jour 5 ; à venir_
 _jour 5 : à venir_
 
 - XXXXXX
+
+
+```java
+
+if (CompteA estUnCompteCourant() && CompteB estUnCompteCourant()){
+    
+        crediter 
+        debiter
+    
+        } else if (CompteA et B sont ou courant ou epargne){
+    
+        if (meme proprioetaire) {
+            crediter
+            debiter
+        }else {
+            exception invalid operetion
+        }
+    
+        }else {
+                Compte non géré
+        }
+
+
+
+```
