@@ -128,7 +128,7 @@ Faites les modifications nécessaires et tester.
 
 - Ajouter les exceptions nécessaires dans les méthodes permettant de gérer les collections. (CompteNonTrouvé ect...)
 
-## TP 13 : Design pattern
+## TP 9 : Design pattern
 
 _jour 5 ; à venir_
 
@@ -140,7 +140,7 @@ _jour 5 ; à venir_
   - Appliquer le design pattern Singleton à votre classe Gestionnaire. Il ne peut en exister qu'une seule instance.
   - Appliquer le design pattern Factory à votre classe Banque : BanqueFactory.
 
-## TP 14 : Les threads
+## TP 10 : Les threads
 
 _jour 5 : à venir_
 
